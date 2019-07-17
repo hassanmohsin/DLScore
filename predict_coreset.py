@@ -50,4 +50,4 @@ pearson_corr = df.corr(method='pearson').iloc[1:, 0]
 spearman_corr = df.corr(method='spearman').iloc[1:, 0]
 kendall_corr = df.corr(method='kendall').iloc[1:, 0]
 corr_df = pd.DataFrame([pearson_corr, spearman_corr, kendall_corr], index=['pearson', 'spearman', 'kendall']).transpose()
-df.to_csv("correlations_coreset.csv", index=None)
+corr_df.to_csv("correlations_coreset.csv", index=None)
